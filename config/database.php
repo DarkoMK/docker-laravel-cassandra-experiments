@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'mysql'),
+    'default' => env('DB_CONNECTION', 'cassandra'),
 
     /*
     |--------------------------------------------------------------------------
@@ -38,6 +38,20 @@ return [
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+        ],
+
+        'cassandra' => [
+            'driver' => 'cassandra',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'port' => env('DB_PORT', 9042),
+            'keyspace' => env('DB_DATABASE', 'project1'),
+            'username' => env('DB_USERNAME', ''),
+            'password' => env('DB_PASSWORD', ''),
+            'page_size' => '5000',
+            'consistency' => 'local_one',
+            'timeout' => null,
+            'connect_timeout' => 5.0,
+            'request_timeout' => 12.0,
         ],
 
         'mysql' => [

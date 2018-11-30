@@ -20,8 +20,8 @@ RUN apt-get update && apt-get install -y \
     git \
     curl wget libssl-dev zlib1g-dev \
     libicu-dev g++ make cmake libgmp-dev \
-    uuid-dev automake cmake g++ pkg-config \
-    libtool apt-utils libssl-dev openssl libssl-dev
+    uuid-dev automake g++ pkg-config \
+    libtool apt-utils openssl
 
 RUN wget downloads.datastax.com/cpp-driver/ubuntu/14.04/dependencies/libuv/v1.8.0/libuv_1.8.0-1_amd64.deb
 RUN wget downloads.datastax.com/cpp-driver/ubuntu/14.04/dependencies/libuv/v1.8.0/libuv-dev_1.8.0-1_amd64.deb
